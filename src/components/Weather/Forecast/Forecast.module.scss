@@ -1,0 +1,17 @@
+
+.card {
+  box-sizing: content-box;
+  background-color: #FFFFFF;
+  cursor: pointer !important;
+  box-shadow: 0 0 3px hsla(0, 0, 0, 0.2) !important;
+  margin: 0 3px;
+  &:hover {
+    box-shadow: 0 0 4px #426CC0 !important;
+  }
+}
+
+.image {
+  max-height: 100px;
+  max-width: 100px;
+  margin: auto;
+}

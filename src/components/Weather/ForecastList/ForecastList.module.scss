@@ -1,0 +1,36 @@
+.container {
+  margin: 1.5rem auto;
+}
+
+.grid {
+  box-shadow: 0 0 2px #808080;
+  display: flex;
+
+}
+
+.box {
+  background-color: #FFFFFF;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.5rem;
+  justify-content: space-between;
+  box-shadow: 0 0 1px #808080;
+}
+
+.city {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.cancel {
+  margin-left: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.no-forecast {
+  padding: 0.5rem;
+  width: 100%;
+}
