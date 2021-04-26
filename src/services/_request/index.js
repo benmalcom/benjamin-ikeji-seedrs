@@ -5,7 +5,7 @@ const defaultOptions = {
   baseURL: 'https://api.openweathermap.org/data/2.5/',
   method: 'GET',
   params: {
-    APPID: '75f972b80e26f14fe6c920aa6a85ad57'
+    APPID: process.env.REACT_APP_OPENWEATHERMAP_KEY
   },
 };
 

@@ -41,7 +41,7 @@ export default function GoogleMaps (props) {
   if (typeof window !== 'undefined' && !loaded.current) {
     if (!document.querySelector('#google-maps')) {
       loadScript(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyAqni-49d7sVrdibxu9VHkF-xaztbsKEgk&libraries=places',
+        `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_API_KEY}&libraries=places`,
         document.querySelector('head'),
         'google-maps',
       );
@@ -105,6 +105,7 @@ export default function GoogleMaps (props) {
       options={options}
       autoComplete
       forcePopupIcon={false}
+      freeSolo
       includeInputInList
       filterSelectedOptions
       value={value}
@@ -125,6 +126,8 @@ export default function GoogleMaps (props) {
           option.structured_formatting.main_text,
           matches.map((match) => [match.offset, match.offset + match.length]),
         );
+
+        console.log("option ", option);
 
         return (
           <Grid container alignItems='center' onClick={() => onItemClick(option.description)}>

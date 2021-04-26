@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+
+  client:
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+      REACT_APP_GOOGLE_API_KEY: "${REACT_APP_GOOGLE_API_KEY}"
+      REACT_APP_OPENWEATHERMAP_KEY: "${REACT_APP_OPENWEATHERMAP_KEY}"
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+
+    ports:
+      - 3000:3000
